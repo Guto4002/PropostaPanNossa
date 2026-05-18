@@ -1,503 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>42.dev — Proposta para Rede de Padarias</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css">
-<link rel="shortcut icon" href="images/logo-pannossa.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ── -->
+  <title>42.dev — A resposta para os seus sistemas</title>
+  <meta name="description" content="Agência de tecnologia full-service para pequenas e médias empresas. Desenvolvimento web, mobile, automações, IA, design UI/UX e consultoria técnica sob medida." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://42.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://42.dev/" />
+  <meta property="og:title"       content="42.dev — A resposta para os seus sistemas" />
+  <meta property="og:description" content="Agência de tecnologia full-service para pequenas e médias empresas. Desenvolvimento web, mobile, automações e IA sob medida." />
+  <meta property="og:image"       content="https://42.dev/media/images/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="42.dev — A resposta para os seus sistemas" />
+  <meta name="twitter:description" content="Agência de tecnologia full-service para pequenas e médias empresas." />
+  <meta name="twitter:image"       content="https://42.dev/media/images/og-image.png" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "42.dev",
+    "description": "Agência de tecnologia full-service para pequenas e médias empresas.",
+    "url": "https://42.dev",
+    "telephone": "+5581981279574",
+    "address": { "@type": "PostalAddress", "addressCountry": "BR" },
+    "serviceType": ["Desenvolvimento Web", "Desenvolvimento Mobile", "Design UI/UX", "Automações", "Inteligência Artificial", "Consultoria Técnica"],
+    "sameAs": ["https://wa.me/5581981279574"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="media/images/favicon-512.png" type="image/x-icon">
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">42<span>.</span>dev</a>
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="https://wa.me/5581981279574" class="btn-primary" target="_blank">Falar conosco</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <div class="nav-mobile-cta">
+        <a href="https://wa.me/5581981279574" class="btn-primary" target="_blank">Falar conosco</a>
+      </div>
+    </div>
+  </nav>
 
-<!-- ============================================================
-     BLOCO: HEADER / NAV ATUALIZADO
-     Substitua toda a tag <nav>...</nav> por este bloco
-     ============================================================ -->
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Agência de tecnologia full-service
+      </div>
+      <p class="hero-tagline">A resposta para os seus sistemas</p>
+      <h1 class="hero-title">Tecnologia que <em>resolve</em> de verdade</h1>
+      <p class="hero-sub">Da ideia ao sistema funcionando, desenvolvemos soluções digitais sob medida para pequenas e médias empresas.</p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn-primary">Ver nossos projetos</a>
+        <a href="https://wa.me/5581981279574" class="btn-ghost" target="_blank">Falar pelo WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-num" data-target="6">0</span>
+          <span class="stat-label">Serviços</span>
+        </div>
+        <div>
+          <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+          <span class="stat-label">Sob medida</span>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">42<span>.dev</span></div>
-    <div class="nav-links">
-        <a href="#problema">O Problema</a>
-      <a href="#solucao">Solução</a>
-      <a href="#fluxo">Fluxo</a>
-      <a href="#stack">Tecnologia</a>
-      <a href="#precos">Investimento</a>
-      <a href="#comparativo">Por que a 42.dev</a>
-      <a href="#cronograma">Cronograma</a>
-      <a href="pannossa.html" class="nav-preview" target="_blank">Ver protótipo do site</a>
+  <!-- ── SERVICES ── -->
+  <section id="servicos">
+    <div class="container reveal">
+      <p class="sec-label">O que fazemos</p>
+      <h2 class="sec-title">Serviços</h2>
+      <p class="sec-sub">Soluções completas do front ao back, do design ao deploy.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <p class="service-name">Desenvolvimento Web</p>
+          <p class="service-desc">Sites, sistemas e aplicações web modernas, responsivas e de alta performance.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <p class="service-name">Desenvolvimento Mobile</p>
+          <p class="service-desc">Apps nativos e híbridos para Android e iOS com foco em usabilidade e performance.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <p class="service-name">Design UI/UX</p>
+          <p class="service-desc">Interfaces bonitas, intuitivas e centradas no usuário, do wireframe ao protótipo final.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <p class="service-name">Manutenção e Suporte</p>
+          <p class="service-desc">Atualizações, correções e suporte contínuo para manter seu sistema sempre no ar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <p class="service-name">Consultoria Técnica</p>
+          <p class="service-desc">Orientação estratégica para decisões tecnológicas que realmente fazem sentido pro seu negócio.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <p class="service-name">Automações e IA</p>
+          <p class="service-desc">Processos automatizados e inteligência artificial aplicada para reduzir tempo operacional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESSO ── -->
+  <section id="processo">
+    <div class="container reveal">
+      <p class="sec-label">Como trabalhamos</p>
+      <h2 class="sec-title">Processo</h2>
+      <p class="sec-sub">Do primeiro contato até o sistema no ar, um fluxo claro, sem surpresas.</p>
+      <div class="process-grid">
+
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-connector"></div>
+          <div class="process-body">
+            <p class="process-name">Reunião inicial</p>
+            <p class="process-desc">Entendemos o seu negócio, os desafios e os objetivos. Sem tecnicês, só conversa honesta sobre o que você precisa.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-connector"></div>
+          <div class="process-body">
+            <p class="process-name">Proposta e planejamento</p>
+            <p class="process-desc">Entregamos uma proposta clara com escopo, prazo e investimento. Você aprova e a gente começa.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-connector"></div>
+          <div class="process-body">
+            <p class="process-name">Desenvolvimento</p>
+            <p class="process-desc">Construímos com atualizações frequentes. Você acompanha o progresso e pode dar feedbacks em tempo real.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-connector"></div>
+          <div class="process-body">
+            <p class="process-name">Testes e ajustes</p>
+            <p class="process-desc">Testamos tudo antes de entregar. Bugs, usabilidade, responsividade, zero surpresas no deploy.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">05</div>
+          <div class="process-connector"></div>
+          <div class="process-body">
+            <p class="process-name">Entrega e deploy</p>
+            <p class="process-desc">Colocamos no ar e garantimos que tudo está funcionando. Treinamos sua equipe se necessário.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">06</div>
+          <div class="process-connector process-connector--last"></div>
+          <div class="process-body">
+            <p class="process-name">Suporte contínuo</p>
+            <p class="process-desc">Seu projeto não termina no deploy. Estamos disponíveis para suporte, melhorias e novas funcionalidades.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="sobre">
+    <div class="container reveal">
+      <p class="sec-label">Quem somos</p>
+      <h2 class="sec-title">Sobre a 42.dev</h2>
+      <div class="about-inner">
+        <div class="about-text">
+          <p>Somos uma agência de tecnologia focada em transformar a realidade de pequenas e médias empresas através de soluções digitais sob medida.</p>
+          <p>O nome vem de uma referência ao Guia do Mochileiro das Galáxias, onde 42 é a resposta para tudo. Aqui, 42 é a resposta para os seus sistemas.</p>
+          <p>Nosso trabalho vai do levantamento de requisitos até o deploy em produção, com suporte contínuo e foco em resultados reais.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight">
+            <p class="highlight-title">Nossa missão</p>
+            <p class="highlight-text">Democratizar o acesso à tecnologia de qualidade para empresas que querem crescer sem precisar de sistemas complexos e caros.</p>
+          </div>
+          <div class="highlight">
+            <p class="highlight-title">Nossa abordagem</p>
+            <p class="highlight-text">Entendemos o negócio antes de escrever uma linha de código. Cada solução é construída para o problema real do cliente.</p>
+          </div>
+          <div class="highlight">
+            <p class="highlight-title">Nosso compromisso</p>
+            <p class="highlight-text">Entrega no prazo, comunicação clara e suporte pós-lançamento. Seu projeto não termina no deploy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section id="projetos">
+    <div class="container reveal">
+      <p class="sec-label">Cases</p>
+      <h2 class="sec-title">Projetos</h2>
+      <p class="sec-sub">Algumas das soluções que desenvolvemos para nossos clientes.</p>
+      <div class="portfolio-grid">
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="media/images/grafica_rl_bot.gif" alt="bot-RL">
+          </div>
+          <div class="project-body">
+            <p class="project-tag">Automação · CRM · WhatsApp</p>
+            <h3 class="project-name">Bot automatizado + CRM — Gráfica RL</h3>
+            <p class="project-desc">Integração do WhatsApp diretamente ao CRM da gráfica, consulta de pedidos, respostas automáticas e atendimento inteligente em tempo real.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span class="tech-pill">Apps Script</span>
+                <span class="tech-pill">Google Sheets</span>
+                <span class="tech-pill">WhatsApp API</span>
+                <span class="tech-pill">Webhooks</span>
+              </div>
+              <button class="btn-ver-projeto" onclick="openModal(0)">Ver projeto →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="media/images/project-2-pc.png" alt="Dashboard-sistema">
+          </div>
+          <div class="project-body">
+            <p class="project-tag">Sistema · Reservas · App de gestão</p>
+            <h3 class="project-name">Sistema de reservas — Alugue em Carneiros</h3>
+            <p class="project-desc">Sistema completo de reservas integrado ao WhatsApp com confirmação automática, lembretes e app de gestão de imóveis.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span class="tech-pill">AppSheet</span>
+                <span class="tech-pill">Google Sheets</span>
+                <span class="tech-pill">Apps Script</span>
+                <span class="tech-pill">WhatsApp API</span>
+              </div>
+              <button class="btn-ver-projeto" onclick="openModal(1)">Ver projeto →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="media/images/project-3-pc.png" alt="Home-site-dommaior">
+          </div>
+          <div class="project-body">
+            <p class="project-tag">E-commerce · Catálogo · Landing Page</p>
+            <h3 class="project-name">Landing Page + catálogo dinâmico — Dom Maior</h3>
+            <p class="project-desc">Página web completa com catálogo dinâmico, carrinho e redirecionamento para WhatsApp e Mercado Livre.</p>
+            <div class="project-footer">
+              <div class="project-tech">
+                <span class="tech-pill">HTML/CSS/JS</span>
+                <span class="tech-pill">Firebase</span>
+                <span class="tech-pill">Apps Script</span>
+              </div>
+              <button class="btn-ver-projeto" onclick="openModal(2)">Ver projeto →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card project-card--cta">
+          <div style="text-align:center;">
+            <p style="font-family:var(--font-title);font-size:16px;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;">Seu projeto aqui</p>
+            <a href="https://wa.me/5581981279574" class="btn-ghost" target="_blank" style="font-size:11px;padding:10px 20px;">Solicitar orçamento</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section id="contato">
+    <div class="container reveal">
+      <p class="sec-label">Fale conosco</p>
+      <h2 class="sec-title">Contato</h2>
+      <p class="sec-sub">Conta pra gente o que você precisa — a primeira conversa é por nossa conta.</p>
+      <div class="contact-inner">
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Nome</label>
+              <input type="text" id="contact-name" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">E-mail</label>
+              <input type="email" id="contact-email" name="email" placeholder="seu@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Assunto</label>
+            <select id="contact-subject" name="subject">
+              <option value="">Selecione um serviço...</option>
+              <option value="web">Desenvolvimento Web</option>
+              <option value="mobile">Desenvolvimento Mobile</option>
+              <option value="design">Design UI/UX</option>
+              <option value="manutencao">Manutenção e Suporte</option>
+              <option value="consultoria">Consultoria Técnica</option>
+              <option value="automacao">Automações e IA</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mensagem</label>
+            <textarea id="contact-message" name="message" rows="5"  placeholder="Descreva seu projeto ou dúvida..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" id="form-submit">Enviar pelo WhatsApp</button>
+            <p class="form-note">Você será redirecionado para o WhatsApp com a mensagem preenchida.</p>
+          </div>
+        </form>
+
+        <div class="contact-aside">
+          <div class="contact-info-block">
+            <p class="contact-info-label">WhatsApp</p>
+            <a href="https://wa.me/5581981279574" class="contact-info-value" target="_blank">+55 (81) 98127-9574</a>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-info-label">E-mail</p>
+            <a href="mailto:contato@42.dev" class="contact-info-value">contato@42.dev</a>
+          </div>
+          <div class="contact-info-block">
+            <p class="contact-info-label">Horário de atendimento</p>
+            <p class="contact-info-value">Seg–Sex, 9h às 18h</p>
+          </div>
+          <div class="contact-promise">
+            <div class="contact-promise-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <p>Respondemos em até <strong>24 horas</strong> em dias úteis.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="cta-section">
+    <div class="container">
+      <div>
+        <h2 class="cta-title">Pronto para digitalizar seu negócio?</h2>
+        <p class="cta-sub">Entre em contato — a primeira conversa é por nossa conta.</p>
+      </div>
+      <a href="https://wa.me/5581981279574" class="btn-primary" target="_blank">Solicitar orçamento</a>
     </div>
   </div>
-</nav>
 
-<!-- ============================================================
-     FIM DO BLOCO
-     ============================================================ -->
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">42<span>.</span>dev</div>
+      <ul class="footer-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://wa.me/5581981279574" target="_blank">WhatsApp</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 42.dev — todos os direitos reservados</p>
+    </div>
+  </footer>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-glow"></div>
-  <div class="container">
-    <div class="hero-tag">Proposta exclusiva — Pan Nossa · Panificadora N. Sra. de Fátima</div>
-    <h1>
-      O sistema que<br>
-      sua rede <span class="accent">precisa</span>.<br>
-      <em>Nenhum outro</em><br>
-      vai ter.
-    </h1>
-    <p class="hero-desc">Um ecossistema digital construído do zero para a sua operação — da comanda no balcão até a tela da cozinha central. Em tempo real. Sem complicação.</p>
-    <div class="hero-actions">
-      <a href="#solucao" class="btn-primary">Como funciona</a>
-    </div>
-    <div class="hero-stats">
-      <div class="reveal"><div class="stat-num">4</div><div class="stat-label">Unidades integradas</div></div>
-      <div class="reveal"><div class="stat-num">01</div><div class="stat-label">Cozinha central</div></div>
-      <div class="reveal"><div class="stat-num">90d</div><div class="stat-label">Prazo de entrega</div></div>
-      <div class="reveal"><div class="stat-num">24/7</div><div class="stat-label">Tempo real</div></div>
-    </div>
+  <!-- ── BACK TO TOP ── -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>
+    </svg>
+  </button>
+
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg">Mensagem enviada!</span>
   </div>
-</section>
 
-<!-- PREVIEW DO SITE DO CLIENTE -->
-<div class="container">
-  <div class="preview-card reveal">
-    <div class="preview-topbar">
-      <div class="preview-dots">
-        <div class="preview-dot" style="background:#FF5F57"></div>
-        <div class="preview-dot" style="background:#FFBD2E"></div>
-        <div class="preview-dot" style="background:#28CA41"></div>
+  <!-- ── MODAL ── -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-gallery">
+        <div class="modal-media-main" id="modal-media-main"></div>
+        <div class="modal-thumbs" id="modal-thumbs"></div>
       </div>
-      <div class="preview-url">pannossa.com.br</div>
-      <a href="pannossa.html" target="_blank" class="preview-open">Abrir protótipo ↗</a>
-    </div>
-    <div class="preview-body">
-      <iframe src="pannossa.html" scrolling="no" tabindex="-1"></iframe>
-      <div class="preview-overlay">
-        <a href="pannossa.html" target="_blank" class="btn-primary" style="cursor:pointer;">Ver protótipo completo do site →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PROBLEMA -->
-<section class="problema" id="problema">
-  <div class="container">
-    <div class="section-tag">O problema</div>
-    <h2 class="section-title reveal">Hoje, sua operação<br>funciona apesar do sistema.</h2>
-    <p class="section-sub reveal">Pedidos perdidos, comunicação falha entre lojas e cozinha central, sem visibilidade do que acontece em tempo real.</p>
-    <div class="problema-grid reveal">
-      <div class="problema-item">
-        <span class="problema-icon">📞</span>
-        <div class="problema-title">Comunicação manual</div>
-        <div class="problema-desc">Loja liga para a central pedindo atualização. Cozinha não sabe a prioridade. Cliente não sabe o status.</div>
-      </div>
-      <div class="problema-item">
-        <span class="problema-icon">🗂️</span>
-        <div class="problema-title">Sem visão centralizada</div>
-        <div class="problema-desc">Pedidos das 4 lojas em sistemas separados. Nenhum dashboard mostra o todo. Decisões no escuro.</div>
-      </div>
-      <div class="problema-item">
-        <span class="problema-icon">⏱️</span>
-        <div class="problema-title">Produção sem ordem</div>
-        <div class="problema-desc">Cozinha recebe pedidos misturados sem saber qual é urgente, qual loja vai retirar e o que já foi feito.</div>
-      </div>
-      <div class="problema-item">
-        <span class="problema-icon">📵</span>
-        <div class="problema-title">Cliente sem resposta</div>
-        <div class="problema-desc">Depois que pede, o cliente desaparece no escuro. Nenhuma atualização automática sobre o status do pedido.</div>
+      <div class="modal-info">
+        <div class="modal-info-header">
+          <p class="modal-tag" id="modal-tag"></p>
+          <h2 class="modal-title" id="modal-title"></h2>
+        </div>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-detail-block">
+          <p class="modal-detail-label">Desafio</p>
+          <p class="modal-detail-text" id="modal-challenge"></p>
+        </div>
+        <div class="modal-detail-block">
+          <p class="modal-detail-label">Solução</p>
+          <p class="modal-detail-text" id="modal-solution"></p>
+        </div>
+        <div class="modal-detail-block">
+          <p class="modal-detail-label">Tecnologias</p>
+          <div class="project-tech" id="modal-tech"></div>
+        </div>
+        <a href="https://wa.me/5581981279574" class="btn-primary" target="_blank" style="margin-top:8px;display:inline-block;">Quero um projeto assim</a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- SOLUÇÃO -->
-<section id="solucao">
-  <div class="container">
-    <div class="section-tag">A solução</div>
-    <h2 class="section-title reveal">Um ecossistema.<br>Cada peça no lugar certo.</h2>
-    <p class="section-sub reveal">Módulos independentes que se comunicam. Você começa com o núcleo e expande quando quiser.</p>
-    <div class="modulos-grid">
-      <div class="modulo-card reveal">
-        <span class="badge-nucleo">Núcleo</span>
-        <span class="modulo-icon">🛒</span>
-        <div class="modulo-num">01</div>
-        <div class="modulo-name">Gestão de Pedidos</div>
-        <div class="modulo-desc">Criação e acompanhamento em tempo real. Balcão, site ou bot — tudo no mesmo sistema.</div>
-        <div class="modulo-tags"><span class="modulo-tag">Tempo real</span><span class="modulo-tag">Multi-canal</span><span class="modulo-tag">Firestore</span></div>
-      </div>
-      <div class="modulo-card reveal">
-        <span class="badge-nucleo">Núcleo</span>
-        <span class="modulo-icon">📺</span>
-        <div class="modulo-num">02</div>
-        <div class="modulo-name">KDS — Telas de Produção</div>
-        <div class="modulo-desc">Cada setor da cozinha central vê só o que é seu, com a loja de destino de cada pedido.</div>
-        <div class="modulo-tags"><span class="modulo-tag">Por setor</span><span class="modulo-tag">Loja destino</span><span class="modulo-tag">Fire Stick</span></div>
-      </div>
-      <div class="modulo-card reveal">
-        <span class="badge-nucleo">Núcleo</span>
-        <span class="modulo-icon">🖨️</span>
-        <div class="modulo-num">03</div>
-        <div class="modulo-name">Impressão Automática</div>
-        <div class="modulo-desc">Pedido criado, comanda impressa com código de barras — integração com seu sistema atual sem retrabalho.</div>
-        <div class="modulo-tags"><span class="modulo-tag">ESC/POS</span><span class="modulo-tag">Cód. barras</span><span class="modulo-tag">Bematech</span></div>
-      </div>
-      <div class="modulo-card reveal">
-        <span class="badge-nucleo">Núcleo</span>
-        <span class="modulo-icon">📊</span>
-        <div class="modulo-num">04</div>
-        <div class="modulo-name">Dashboard Gerencial</div>
-        <div class="modulo-desc">Visão consolidada de todas as unidades. Pedidos, status, métricas — tudo em uma tela, de qualquer lugar.</div>
-        <div class="modulo-tags"><span class="modulo-tag">Multi-unidade</span><span class="modulo-tag">Tempo real</span><span class="modulo-tag">Mobile</span></div>
-      </div>
-      <div class="modulo-card reveal">
-        <span class="badge-opt">Opcional</span>
-        <span class="modulo-icon">🌐</span>
-        <div class="modulo-num">05</div>
-        <div class="modulo-name">Site + Cardápio Digital</div>
-        <div class="modulo-desc">Site institucional com cardápio e pedidos online. Pagamento via Pix ou cartão. Rastreio em tempo real.</div>
-        <div class="modulo-tags"><span class="modulo-tag">Stripe</span><span class="modulo-tag">Pix</span><span class="modulo-tag">Login cliente</span></div>
-      </div>
-      <div class="modulo-card reveal">
-        <span class="badge-opt">Opcional</span>
-        <span class="modulo-icon">🤖</span>
-        <div class="modulo-num">06</div>
-        <div class="modulo-name">Bot WhatsApp</div>
-        <div class="modulo-desc">Atendimento e rastreio automatizados. API oficial da Meta — número da sua padaria, sem intermediário.</div>
-        <div class="modulo-tags"><span class="modulo-tag">Meta API</span><span class="modulo-tag">Rastreio</span><span class="modulo-tag">Automático</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+  <script src="script.js"></script>
 
-<!-- FLUXO -->
-<section id="fluxo" class="fluxo">
-  <div class="container">
-    <div class="section-tag">Como funciona</div>
-    <h2 class="section-title reveal">Do pedido à entrega.<br>Sem nenhuma lacuna.</h2>
-    <p class="section-sub reveal">Cada etapa conectada à próxima. Tudo automático, tudo rastreável.</p>
-    <div class="fluxo-steps">
-      <div class="fluxo-step reveal">
-        <div class="step-num">01</div>
-        <div class="step-content">
-          <div class="step-title">Pedido criado</div>
-          <div class="step-desc">Atendente registra no balcão ou cliente pede pelo site. Sistema captura canal, itens e tipo de recebimento.</div>
-          <div class="step-chips"><span class="step-chip">Balcão</span><span class="step-chip">Site</span><span class="step-chip">Bot</span><span class="step-chip">Firestore</span></div>
-        </div>
-      </div>
-      <div class="fluxo-step reveal">
-        <div class="step-num">02</div>
-        <div class="step-content">
-          <div class="step-title">Pagamento confirmado</div>
-          <div class="step-desc">Presencial registrado pelo atendente. Online processado via Stripe — pedido só liberado após confirmação.</div>
-          <div class="step-chips"><span class="step-chip">Dinheiro</span><span class="step-chip">Cartão</span><span class="step-chip">Pix</span><span class="step-chip">Stripe</span></div>
-        </div>
-      </div>
-      <div class="fluxo-step reveal">
-        <div class="step-num">03</div>
-        <div class="step-content">
-          <div class="step-title">Cozinha central recebe</div>
-          <div class="step-desc">Cada setor vê seus itens na tela. Comanda impressa automaticamente. Cozinheiro inicia com um toque.</div>
-          <div class="step-chips"><span class="step-chip">KDS por setor</span><span class="step-chip">Impressão automática</span><span class="step-chip">Tempo real</span></div>
-        </div>
-      </div>
-      <div class="fluxo-step reveal">
-        <div class="step-num">04</div>
-        <div class="step-content">
-          <div class="step-title">Pedido pronto</div>
-          <div class="step-desc">Sistema detecta automaticamente e dispara notificação WhatsApp para o cliente e alerta para a loja de destino.</div>
-          <div class="step-chips"><span class="step-chip">WhatsApp automático</span><span class="step-chip">Alerta loja</span><span class="step-chip">Sem ligação</span></div>
-        </div>
-      </div>
-      <div class="fluxo-step reveal">
-        <div class="step-num">05</div>
-        <div class="step-content">
-          <div class="step-title">Entrega ou retirada</div>
-          <div class="step-desc">Cliente retira na loja, recebe em casa ou pega no balcão. Atendente confirma e pedido é encerrado.</div>
-          <div class="step-chips"><span class="step-chip">Retirada</span><span class="step-chip">Entrega</span><span class="step-chip">Balcão</span><span class="step-chip">Histórico</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STACK -->
-<section id="stack">
-  <div class="container">
-    <div class="section-tag">Tecnologia</div>
-    <h2 class="section-title reveal">Construído para durar.<br>E para crescer.</h2>
-    <p class="section-sub reveal">Stack moderna, escalável e sem dependências frágeis. Cada ferramenta escolhida por robustez e custo-benefício real.</p>
-    <div class="stack-grid">
-      <div class="stack-item reveal"><span class="stack-icon">🔥</span><div class="stack-name">Firebase</div><div class="stack-role">Banco de dados, auth e hospedagem</div></div>
-      <div class="stack-item reveal"><span class="stack-icon">⚡</span><div class="stack-name">Cloud Functions</div><div class="stack-role">Lógica de negócio e integrações</div></div>
-      <div class="stack-item reveal"><span class="stack-icon">💳</span><div class="stack-name">Stripe</div><div class="stack-role">Pagamentos online — Pix e cartão</div></div>
-      <div class="stack-item reveal"><span class="stack-icon">💬</span><div class="stack-name">Meta Cloud API</div><div class="stack-role">WhatsApp oficial sem intermediário</div></div>
-      <div class="stack-item reveal"><span class="stack-icon">🖨️</span><div class="stack-name">Bematech MP-4200</div><div class="stack-role">Impressora térmica — padrão BR</div></div>
-      <div class="stack-item reveal"><span class="stack-icon">📺</span><div class="stack-name">Fire TV Stick</div><div class="stack-role">KDS por setor — plug & play</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRECOS -->
-<section id="precos" class="precos">
-  <div class="container">
-    <div class="section-tag">Investimento</div>
-    <h2 class="section-title reveal">Três pacotes.<br>Uma decisão.</h2>
-    <p class="section-sub reveal">Comece com o essencial e expanda quando fizer sentido. Sem contrato de longo prazo no primeiro momento.</p>
-    <div class="precos-grid">
-      <div class="preco-card reveal">
-        <div class="preco-nome">Essencial</div>
-        <div class="preco-valor">R$11.000</div>
-        <div class="preco-periodo">desenvolvimento único</div>
-        <div class="preco-divider"></div>
-        <div class="preco-items">
-          <div class="preco-item"><div class="preco-item-dot"></div>Gestão completa de pedidos</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>KDS por setor na cozinha central</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Impressão automática de comandas</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Dashboard gerencial multi-unidade</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Cadastros completos do sistema</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>4 unidades integradas</div>
-        </div>
-        <div class="mens-note">+ <span>R$ 500/mês</span> plano de parceria</div>
-      </div>
-      <div class="preco-card destaque reveal">
-        <div class="preco-nome">Completo</div>
-        <div class="preco-valor">R$13.000</div>
-        <div class="preco-periodo">desenvolvimento único</div>
-        <div class="preco-divider"></div>
-        <div class="preco-items">
-          <div class="preco-item"><div class="preco-item-dot"></div>Tudo do pacote Essencial</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Site institucional completo</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Cardápio digital com pedidos online</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Pagamento via Pix e cartão (Stripe)</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Login e histórico para clientes</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Rastreio de pedido em tempo real</div>
-        </div>
-        <div class="mens-note">+ <span>R$ 500/mês</span> plano de parceria</div>
-      </div>
-      <div class="preco-card reveal">
-        <div class="preco-nome">Total</div>
-        <div class="preco-valor">R$15.000</div>
-        <div class="preco-periodo">desenvolvimento único</div>
-        <div class="preco-divider"></div>
-        <div class="preco-items">
-          <div class="preco-item"><div class="preco-item-dot"></div>Tudo do pacote Completo</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Bot WhatsApp integrado ao sistema</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Atendimento automatizado via conversa</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Notificações em cada etapa do pedido</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>API oficial Meta — número da padaria</div>
-          <div class="preco-item"><div class="preco-item-dot"></div>Ecossistema 100% integrado</div>
-        </div>
-        <div class="mens-note">+ <span>R$ 500/mês</span> plano de parceria</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     BLOCO: COMPARATIVO DE MERCADO
-     ============================================================ -->
-
-<section style="padding: 100px 0; position: relative; z-index: 2;" id="comparativo">
-  <div style="max-width:1100px; margin:0 auto; padding:0 32px;">
-
-    <!-- HEADER -->
-    <div style="font-family:'Space Mono',monospace; font-size:11px; color:#F97316; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;">
-      <span style="opacity:0.5">//</span> Por que a 42.dev
-    </div>
-    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(32px,4vw,52px); font-weight:800; letter-spacing:-1.5px; line-height:1.05; margin-bottom:16px;">
-      Nenhuma outra opção<br>resolve o seu problema.
-    </h2>
-    <p style="font-size:16px; color:#9A8E78; line-height:1.6; max-width:560px; margin-bottom:64px;">
-      Comparamos as alternativas do mercado com o que a 42.dev entrega. O resultado fala por si só.
-    </p>
-
-    <!-- TABELA COMPARATIVA -->
-    <div style="background:#1C1710; border:1px solid rgba(255,200,100,0.07); border-radius:12px; overflow:hidden; margin-bottom:32px;">
-
-      <!-- HEADER DA TABELA -->
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; background:#111008; border-bottom:1px solid rgba(255,200,100,0.07);">
-        <div style="padding:16px 24px; font-size:11px; font-weight:600; color:#5A5040; letter-spacing:0.08em; text-transform:uppercase;">Recurso</div>
-        <div style="padding:16px 16px; font-size:11px; font-weight:600; color:#5A5040; letter-spacing:0.08em; text-transform:uppercase; text-align:center;">SaaS genérico<br><span style="color:#3A3028; font-size:10px;">R$ 800+/mês</span></div>
-        <div style="padding:16px 16px; font-size:11px; font-weight:600; color:#5A5040; letter-spacing:0.08em; text-transform:uppercase; text-align:center;">Agência<br><span style="color:#3A3028; font-size:10px;">R$ 80k–200k</span></div>
-        <div style="padding:16px 16px; font-size:11px; font-weight:700; color:#F97316; letter-spacing:0.08em; text-transform:uppercase; text-align:center; background:rgba(249,115,22,0.05); border-left:1px solid rgba(249,115,22,0.15);">42.dev<br><span style="color:#F97316; font-size:10px; opacity:0.7;">a partir de R$ 11k</span></div>
-      </div>
-
-      <!-- LINHAS -->
-      <!-- helper: ✓ verde, ~ amarelo, ✗ vermelho -->
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05);">
-        <div style="padding:16px 24px; font-size:13px; color:#9A8E78;">Gestão de pedidos multi-canal</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80;">✓</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80;">✓</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05);">
-        <div style="padding:16px 24px; font-size:13px; color:#9A8E78;">KDS por setor na produção</div>
-        <div style="padding:16px; text-align:center; font-size:13px; color:#FBBF24;">~</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80;">✓</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05);">
-        <div style="padding:16px 24px; font-size:13px; color:#9A8E78;">Dashboard multi-unidade</div>
-        <div style="padding:16px; text-align:center; font-size:13px; color:#FBBF24;">~ <span style="font-size:10px; color:#5A5040;">(plano caro)</span></div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80;">✓</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-
-      <!-- LINHA DESTAQUE -->
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05); background:rgba(249,115,22,0.03);">
-        <div style="padding:16px 24px;">
-          <div style="font-size:13px; color:#F0EBE0; font-weight:600;">Cozinha central com múltiplos pontos de venda</div>
-          <div style="font-size:11px; color:#5A5040; margin-top:3px;">Pedido feito em qualquer loja, produção toda na Unidade 1</div>
-        </div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:13px; color:#FBBF24;">~ <span style="font-size:10px; color:#5A5040;">(customização cara)</span></div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05); background:rgba(249,115,22,0.03);">
-        <div style="padding:16px 24px;">
-          <div style="font-size:13px; color:#F0EBE0; font-weight:600;">Integração via código de barras com sistema legado</div>
-          <div style="font-size:11px; color:#5A5040; margin-top:3px;">Sem substituir o sistema que já funciona</div>
-        </div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05); background:rgba(249,115,22,0.03);">
-        <div style="padding:16px 24px;">
-          <div style="font-size:13px; color:#F0EBE0; font-weight:600;">KDS mostra loja de destino de cada pedido</div>
-          <div style="font-size:11px; color:#5A5040; margin-top:3px;">Cozinheiro sabe exatamente para onde vai cada item</div>
-        </div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05);">
-        <div style="padding:16px 24px; font-size:13px; color:#9A8E78;">Bot WhatsApp integrado ao sistema</div>
-        <div style="padding:16px; text-align:center; font-size:13px; color:#FBBF24;">~ <span style="font-size:10px; color:#5A5040;">(extra pago)</span></div>
-        <div style="padding:16px; text-align:center; font-size:13px; color:#FBBF24;">~ <span style="font-size:10px; color:#5A5040;">(custo maior)</span></div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; border-bottom:1px solid rgba(255,200,100,0.05);">
-        <div style="padding:16px 24px; font-size:13px; color:#9A8E78;">Suporte direto com o desenvolvedor</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#EF4444;">✗</div>
-        <div style="padding:16px; text-align:center; font-size:14px; color:#4ADE80; background:rgba(249,115,22,0.04); border-left:1px solid rgba(249,115,22,0.1);">✓</div>
-      </div>
-
-      <!-- FOOTER DA TABELA — CUSTO TOTAL -->
-      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; background:#111008; border-top:1px solid rgba(255,200,100,0.1);">
-        <div style="padding:20px 24px; font-size:12px; font-weight:700; color:#5A5040; letter-spacing:0.08em; text-transform:uppercase;">Custo total — 1º ano</div>
-        <div style="padding:20px 16px; text-align:center;">
-          <div style="font-family:'Space Mono',monospace; font-size:15px; font-weight:700; color:#EF4444;">R$ 9.600+</div>
-          <div style="font-size:10px; color:#5A5040; margin-top:3px;">só mensalidade</div>
-        </div>
-        <div style="padding:20px 16px; text-align:center;">
-          <div style="font-family:'Space Mono',monospace; font-size:15px; font-weight:700; color:#FBBF24;">R$ 80k–200k</div>
-          <div style="font-size:10px; color:#5A5040; margin-top:3px;">desenvolvimento</div>
-        </div>
-        <div style="padding:20px 16px; text-align:center; background:rgba(249,115,22,0.06); border-left:1px solid rgba(249,115,22,0.15);">
-          <div style="font-family:'Space Mono',monospace; font-size:15px; font-weight:700; color:#F97316;">R$ 17k</div>
-          <div style="font-size:10px; color:#F97316; opacity:0.6; margin-top:3px;">dev + 1º ano parceria</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LEGENDA -->
-    <div style="display:flex; gap:24px; margin-bottom:48px; flex-wrap:wrap;">
-      <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#5A5040;">
-        <span style="color:#4ADE80; font-size:14px;">✓</span> Disponível
-      </div>
-      <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#5A5040;">
-        <span style="color:#FBBF24; font-size:13px;">~</span> Parcial ou com custo adicional
-      </div>
-      <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#5A5040;">
-        <span style="color:#EF4444; font-size:14px;">✗</span> Não disponível
-      </div>
-    </div>
-
-    <!-- CARDS DE ARGUMENTO -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
-
-      <div style="background:#1C1710; border:1px solid rgba(249,115,22,0.2); border-radius:8px; padding:28px; position:relative; overflow:hidden;">
-        <div style="position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, #F97316, transparent);"></div>
-        <div style="font-size:28px; margin-bottom:14px;">🎯</div>
-        <div style="font-size:15px; font-weight:700; margin-bottom:8px; color:#F0EBE0;">Feito para a sua operação</div>
-        <div style="font-size:13px; color:#9A8E78; line-height:1.6;">Nenhum sistema pronto no mercado foi pensado para a lógica de cozinha central com múltiplos pontos de venda e integração com sistema legado via código de barras. Isso foi construído do zero para a Pan Nossa.</div>
-      </div>
-
-      <div style="background:#1C1710; border:1px solid rgba(255,200,100,0.07); border-radius:8px; padding:28px;">
-        <div style="font-size:28px; margin-bottom:14px;">💰</div>
-        <div style="font-size:15px; font-weight:700; margin-bottom:8px; color:#F0EBE0;">Até 15x mais barato que uma agência</div>
-        <div style="font-size:13px; color:#9A8E78; line-height:1.6;">Uma agência cobraria entre R$ 80.000 e R$ 200.000 para desenvolver um sistema com esse escopo — e ainda assim sem as especificidades da sua operação. Você paga pelo trabalho, não pela estrutura da empresa.</div>
-      </div>
-
-      <div style="background:#1C1710; border:1px solid rgba(255,200,100,0.07); border-radius:8px; padding:28px;">
-        <div style="font-size:28px; margin-bottom:14px;">📞</div>
-        <div style="font-size:15px; font-weight:700; margin-bottom:8px; color:#F0EBE0;">Suporte direto, sem fila de chamados</div>
-        <div style="font-size:13px; color:#9A8E78; line-height:1.6;">Com SaaS ou agência, qualquer ajuste vira um ticket. Com a 42.dev, você fala diretamente com quem construiu o sistema. Mais rápido, mais barato e sem burocracia.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CRONOGRAMA -->
-<section id="cronograma">
-  <div class="container">
-    <div class="section-tag">Cronograma</div>
-    <h2 class="section-title reveal">90 dias do contrato<br>ao go-live.</h2>
-    <p class="section-sub reveal">Desenvolvimento em fases, com entregas visíveis em cada etapa.</p>
-    <div class="cronograma-grid reveal">
-      <div class="crono-fase"><div class="crono-num">01</div><div class="crono-title">Levantamento</div><div class="crono-semanas">Sem 1–2</div><div class="crono-desc">Mapeamento de fluxos e validação</div></div>
-      <div class="crono-fase"><div class="crono-num">02</div><div class="crono-title">Núcleo</div><div class="crono-semanas">Sem 3–6</div><div class="crono-desc">Pedidos, KDS, impressora e dashboard</div></div>
-      <div class="crono-fase"><div class="crono-num">03</div><div class="crono-title">Integrações</div><div class="crono-semanas">Sem 7–10</div><div class="crono-desc">Site, pagamentos e bot WhatsApp</div></div>
-      <div class="crono-fase"><div class="crono-num">04</div><div class="crono-title">Testes</div><div class="crono-semanas">Sem 11–12</div><div class="crono-desc">QA completo em todas as unidades</div></div>
-      <div class="crono-fase"><div class="crono-num">05</div><div class="crono-title">Go-live</div><div class="crono-semanas">Sem 13–14</div><div class="crono-desc">Deploy e treinamento da equipe</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-glow"></div>
-  <div class="container">
-    <div class="section-tag" style="justify-content:center">Próximo passo</div>
-    <h2>Pronto para<br><span style="color:var(--accent)">começar?</span></h2>
-    <p>Proposta válida por 30 dias. Entrada de 40% na assinatura,<br>60% na entrega. Parceria começa 30 dias após o go-live.</p>
-    <div class="cta-actions">
-      <a href="https://wa.me/+5581981279574" class="btn-primary" target="_blank">Falar pelo WhatsApp →</a>
-      <a href="mailto:augustolopes230@gmail.com" class="btn-outline">Enviar e-mail</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-copy">© 2026 42.dev — Todos os direitos reservados</div>
-      <div class="footer-badge">Sistema em <span>● produção</span> em 90 dias</div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx - 4 + 'px'; cursor.style.top = my - 4 + 'px'; });
-  function animRing() { rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12; ring.style.left = rx - 16 + 'px'; ring.style.top = ry - 16 + 'px'; requestAnimationFrame(animRing); }
-  animRing();
-  document.querySelectorAll('a, button').forEach(el => { el.addEventListener('mouseenter', () => { ring.style.transform = 'scale(1.5)'; ring.style.borderColor = 'rgba(249,115,22,0.8)'; }); el.addEventListener('mouseleave', () => { ring.style.transform = 'scale(1)'; ring.style.borderColor = 'rgba(249,115,22,0.5)'; }); });
-  const reveals = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-  reveals.forEach(el => obs.observe(el));
-  document.querySelectorAll('.hero-stats .reveal').forEach((el, i) => { el.style.transitionDelay = (i * 0.1) + 's'; });
-</script>
 </body>
 </html>
