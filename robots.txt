@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://42.dev/sitemap.xml
